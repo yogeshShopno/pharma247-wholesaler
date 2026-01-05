@@ -12,7 +12,7 @@ function App() {
   const mockResults = [
     {
       id: 1,
-      itemName: 'PAN 40',
+      itemName: 'asN 40',
       brandName: 'Pantoprazole',
       saltName: 'Pantoprazole Sodium',
       quantity: 500,
@@ -36,7 +36,7 @@ function App() {
     },
     {
       id: 2,
-      itemName: 'PAN 40',
+      itemName: 'laol 60',
       brandName: 'Pantocid',
       saltName: 'Pantoprazole Sodium',
       quantity: 1200,
@@ -60,7 +60,7 @@ function App() {
     },
     {
       id: 3,
-      itemName: 'PAN 40',
+      itemName: 'jajam 50',
       brandName: 'Pantocid DSR',
       saltName: 'Pantoprazole + Domperidone',
       quantity: 350,
@@ -84,7 +84,7 @@ function App() {
     },
     {
       id: 4,
-      itemName: 'PAN 40',
+      itemName: 'ososl 40',
       brandName: 'Pantosec',
       saltName: 'Pantoprazole Sodium',
       quantity: 800,
@@ -127,62 +127,24 @@ function App() {
       <header className="bg-white/90 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Bar */}
-          <div className="flex items-center justify-between py-4 border-b border-slate-100">
+          <div className="flex items-center justify-between py-2 border-b border-slate-100">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <Package className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Pharma247
-                </h1>
-                <p className="text-xs text-slate-500 font-medium">Wholesaler Inventory Search</p>
-              </div>
-            </div>
-            
-            <div className="hidden lg:flex items-center space-x-8">
-              <div className="flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
-                <TrendingUp className="w-4 h-4" />
-                <span className="text-sm font-medium">5000+ Wholesalers</span>
-              </div>
-              <div className="flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
-                <Clock className="w-4 h-4" />
-                <span className="text-sm font-medium">24/7 Updates</span>
-              </div>
-              <div className="flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-colors cursor-pointer">
-                <Shield className="w-4 h-4" />
-                <span className="text-sm font-medium">Verified Sellers</span>
+              <div className=" rounded-xl flex items-center justify-center  ">
+
+                <img src='/pharmalogo.webp' className='h-14'></img>
               </div>
             </div>
 
             <div className="flex items-center space-x-3">
-              <button className="hidden md:flex items-center space-x-2 px-4 py-2 text-slate-600 hover:text-blue-600 font-medium transition-colors">
+              <button className="bg-gradient-to-r  from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700  text-white  md:flex items-center space-x-2 px-4 py-2 px-6 py-2 rounded-lg font-semibold shadow-lg shadow-blue-500/30 transition-all duration-300 hover:shadow-xl">
                 <User className="w-4 h-4" />
-                <span>Login</span>
+                <span>  Register to become wholesaler</span>
               </button>
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg shadow-blue-500/30 transition-all duration-300 hover:shadow-xl">
-                Register
-              </button>
+
             </div>
           </div>
 
-          {/* Navigation */}
-          <nav className="py-3">
-            <ul className="flex items-center space-x-8">
-              <li className="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1 cursor-pointer">
-                Search Medicines
-              </li>
-              <li className="text-slate-600 hover:text-blue-600 font-medium transition-colors cursor-pointer">
-                Wholesalers
-              </li>
-              <li className="text-slate-600 hover:text-blue-600 font-medium transition-colors cursor-pointer">
-                How It Works
-              </li>
-              <li className="text-slate-600 hover:text-blue-600 font-medium transition-colors cursor-pointer">
-                Contact
-              </li>
-            </ul>
-          </nav>
+
         </div>
       </header>
 
@@ -197,9 +159,7 @@ function App() {
                 Near You, Instantly
               </span>
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Search across 5000+ wholesalers and millions of products within 70 km radius
-            </p>
+
           </div>
 
           {/* Search Box */}
@@ -210,7 +170,7 @@ function App() {
                   <Search className="w-6 h-6 text-slate-400" />
                   <input
                     type="text"
-                    placeholder="Search by medicine name, brand, or salt (e.g., PAN 40, Azithromycin)"
+                    placeholder="Search by medicine name (e.g, Azithromycin)"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="flex-1 py-4 text-lg outline-none text-slate-700 placeholder:text-slate-400"
@@ -249,9 +209,20 @@ function App() {
                     className="flex-1 py-3 outline-none text-slate-700 placeholder:text-slate-400"
                   />
                 </div>
-                <div className="px-4 py-3 text-sm text-slate-500 font-medium border-l border-slate-200">
-                  Within 70 KM
+                <div className="border-l border-slate-200 px-2">
+                  <select
+                    className="px-4 py-3 text-sm text-slate-500 font-medium bg-transparent outline-none cursor-pointer"
+                    defaultValue="70"
+                  >
+                    <option value="10">Within 5KM - 10KM</option>
+                    <option value="25">Within 10KM - 25KM</option>
+                    <option value="50">Within 25KM - 50KM </option>
+                    <option value="100">Within 50KM - 100KM</option>
+                    <option value="500">Within 100KM - 500KM</option>
+
+                  </select>
                 </div>
+
               </div>
             </div>
           </form>
@@ -336,13 +307,10 @@ function App() {
             {/* Results Header */}
             <div className="mb-6 flex items-center justify-between">
               <div>
-                <h3 className="text-2xl font-bold text-slate-800">Search Results</h3>
-                <p className="text-slate-600 mt-1">Found {mockResults.length} wholesalers with "{searchQuery}"</p>
+                <h3 className="text-2xl font-bold text-slate-800">Search Results...</h3>
+
               </div>
-              <div className="flex items-center space-x-2 text-sm text-slate-500">
-                <AlertCircle className="w-4 h-4" />
-                <span>Sorted by distance</span>
-              </div>
+
             </div>
 
             {/* Results Grid */}
@@ -359,9 +327,6 @@ function App() {
                       <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
                           <h4 className="text-xl font-bold text-slate-800">{result.itemName}</h4>
-                          <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-semibold rounded-full">
-                            In Stock
-                          </span>
                         </div>
                         <div className="flex flex-wrap gap-2 text-sm text-slate-600">
                           <span className="font-medium">{result.brandName}</span>
@@ -370,10 +335,9 @@ function App() {
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                           ₹{result.price}
                         </div>
-                        <div className="text-xs text-slate-500 font-medium mt-1">per unit</div>
                       </div>
                     </div>
 
@@ -410,15 +374,10 @@ function App() {
                             <span className="font-bold text-slate-800">{result.quantity}</span> units available
                           </span>
                         </div>
-                        <div className="flex items-center space-x-2">
-                          <Clock className="w-4 h-4 text-slate-400" />
-                          <span className="text-sm text-slate-600">
-                            Updated: <span className="font-medium text-slate-800">{result.lastUpdate}</span>
-                          </span>
-                        </div>
+
                       </div>
                       <div className="flex items-center space-x-3">
-                        <button 
+                        <button
                           onClick={() => setSelectedWholesaler(result)}
                           className="flex items-center space-x-2 bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-blue-600 text-slate-700 hover:text-blue-600 px-5 py-3 rounded-xl font-semibold transition-all duration-300"
                         >
@@ -451,31 +410,14 @@ function App() {
               >
                 ✕
               </button>
-              <div className="flex items-start space-x-4">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                  <Building2 className="w-8 h-8 text-white" />
+              <div className="flex items-center space-x-4">
+                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                  <Building2 className="w-6 h-6 text-white" />
                 </div>
-                <div className="flex-1">
-                  <h2 className="text-3xl font-bold text-white mb-2">
+                <div className="flex">
+                  <h2 className="text-2xl font-semibold text-white ">
                     {selectedWholesaler.wholesaler}
                   </h2>
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-5 h-5 text-yellow-300 fill-yellow-300" />
-                      <span className="text-white font-semibold">
-                        {selectedWholesaler.wholesalerDetails.rating}
-                      </span>
-                    </div>
-                    {selectedWholesaler.wholesalerDetails.verified && (
-                      <div className="flex items-center space-x-1 bg-white/20 px-3 py-1 rounded-full">
-                        <CheckCircle className="w-4 h-4 text-white" />
-                        <span className="text-white text-sm font-medium">Verified</span>
-                      </div>
-                    )}
-                    <div className="text-white/80 text-sm">
-                      Est. {selectedWholesaler.wholesalerDetails.establishedYear}
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -554,7 +496,7 @@ function App() {
                   <p className="text-slate-700 leading-relaxed">
                     {selectedWholesaler.wholesalerDetails.fullAddress}
                   </p>
-                  <button className="mt-4 flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors">
+                  <button className=" mt-4 flex items-center space-x-2 text-white hover:text-white font-semibold transition-colors">
                     <Navigation className="w-4 h-4" />
                     <span>Get Directions</span>
                   </button>
@@ -574,50 +516,6 @@ function App() {
                     </div>
                     <div className="text-sm text-slate-600 font-medium">Total Products</div>
                   </div>
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 border border-green-200">
-                    <div className="text-3xl font-bold text-green-600 mb-1">
-                      {selectedWholesaler.wholesalerDetails.rating}/5.0
-                    </div>
-                    <div className="text-sm text-slate-600 font-medium">Customer Rating</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-5 border border-purple-200">
-                    <div className="text-3xl font-bold text-purple-600 mb-1">
-                      {new Date().getFullYear() - selectedWholesaler.wholesalerDetails.establishedYear}+
-                    </div>
-                    <div className="text-sm text-slate-600 font-medium">Years in Business</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Features */}
-              <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center space-x-2">
-                  <Package className="w-5 h-5 text-blue-600" />
-                  <span>Services & Features</span>
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  {[
-                    { icon: CheckCircle, text: 'Verified Seller', available: selectedWholesaler.wholesalerDetails.verified },
-                    { icon: Package, text: 'Delivery Available', available: selectedWholesaler.wholesalerDetails.deliveryAvailable },
-                    { icon: Clock, text: '24/7 Support', available: true },
-                    { icon: Shield, text: 'Quality Assured', available: true },
-                    { icon: TrendingUp, text: 'Bulk Orders', available: true },
-                    { icon: CheckCircle, text: 'Licensed', available: true }
-                  ].map((feature, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-center space-x-2 p-3 rounded-lg ${
-                        feature.available
-                          ? 'bg-green-50 border border-green-200'
-                          : 'bg-slate-50 border border-slate-200 opacity-50'
-                      }`}
-                    >
-                      <feature.icon className={`w-5 h-5 ${feature.available ? 'text-green-600' : 'text-slate-400'}`} />
-                      <span className={`text-sm font-medium ${feature.available ? 'text-slate-800' : 'text-slate-500'}`}>
-                        {feature.text}
-                      </span>
-                    </div>
-                  ))}
                 </div>
               </div>
 
@@ -678,7 +576,7 @@ function App() {
                 <h3 className="text-xl font-bold">Pharma247</h3>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed">
-                India's largest wholesaler inventory search platform. Connect with 5000+ verified wholesalers instantly.
+                Manage your pharmacy anytime, anywhere with Pharma24*7's cloud-based software, Chemist App & Patient App. Automate billing, inventory, online orders, GST reports, and customer engagement seamlessly. Stay connected and grow your business with ease!
               </p>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors">
@@ -707,19 +605,7 @@ function App() {
               </ul>
             </div>
 
-            {/* For Wholesalers */}
-            <div>
-              <h4 className="font-bold text-lg mb-4">For Wholesalers</h4>
-              <ul className="space-y-2">
-                {['Register Your Business', 'Upload Inventory', 'Subscription Plans', 'API Documentation', 'Support'].map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+       
 
             {/* Contact */}
             <div>
@@ -729,21 +615,21 @@ function App() {
                   <Mail className="w-5 h-5 text-blue-400 mt-0.5" />
                   <div>
                     <div className="text-sm text-slate-400">Email</div>
-                    <div className="text-sm font-medium">support@pharma247.in</div>
+                    <div className="text-sm font-medium">inquiry@pharma247.in</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-green-400 mt-0.5" />
                   <div>
                     <div className="text-sm text-slate-400">Phone</div>
-                    <div className="text-sm font-medium">+91 1800 XXX XXXX</div>
+                    <div className="text-sm font-medium">+91 908 111 247</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-orange-400 mt-0.5" />
                   <div>
                     <div className="text-sm text-slate-400">Address</div>
-                    <div className="text-sm font-medium">Ahmedabad, Gujarat, India</div>
+                    <div className="text-sm font-medium">SF-14/B,DHARTI CITY COMPLEX ,KADI 382715</div>
                   </div>
                 </div>
               </div>
