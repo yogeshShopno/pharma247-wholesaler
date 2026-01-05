@@ -605,8 +605,6 @@ function App() {
               </ul>
             </div>
 
-       
-
             {/* Contact */}
             <div>
               <h4 className="font-bold text-lg mb-4">Contact Us</h4>
