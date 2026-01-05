@@ -213,12 +213,12 @@ function App() {
                   <select
                     className="px-4 py-3 text-sm text-slate-500 font-medium bg-transparent outline-none cursor-pointer"
                     defaultValue="70"
-                  >
-                    <option value="10">Within 5KM - 10KM</option>
-                    <option value="25">Within 10KM - 25KM</option>
-                    <option value="50">Within 25KM - 50KM </option>
-                    <option value="100">Within 50KM - 100KM</option>
-                    <option value="500">Within 100KM - 500KM</option>
+                  >                   
+                    <option value="10">5KM - 10KM</option>
+                    <option value="25">10KM - 25KM</option>
+                    <option value="50">25KM - 50KM </option>
+                    <option value="100">50KM - 100KM</option>
+                    <option value="500">100KM - 500KM</option>
 
                   </select>
                 </div>
