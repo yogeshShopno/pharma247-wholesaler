@@ -170,7 +170,7 @@ function App() {
                   <Search className="w-6 h-6 text-slate-400" />
                   <input
                     type="text"
-                    placeholder="Search by medicine name (e.g, Azithromycin)"
+                    placeholder="Search by medicine name (e.g, Dolo 650)"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="flex-1 py-4 text-lg outline-none text-slate-700 placeholder:text-slate-400"
@@ -213,7 +213,7 @@ function App() {
                   <select
                     className="px-4 py-3 text-sm text-slate-500 font-medium bg-transparent outline-none cursor-pointer"
                     defaultValue="70"
-                  >                   
+                  >
                     <option value="10">5KM - 10KM</option>
                     <option value="25">10KM - 25KM</option>
                     <option value="50">25KM - 50KM </option>
@@ -328,15 +328,15 @@ function App() {
                         <div className="flex items-center space-x-3 mb-2">
                           <h4 className="text-xl font-bold text-slate-800">{result.itemName}</h4>
                         </div>
-                        <div className="flex flex-wrap gap-2 text-sm text-slate-600">
+                        {/* <div className="flex flex-wrap gap-2 text-sm text-slate-600">
                           <span className="font-medium">{result.brandName}</span>
                           <span className="text-slate-400">•</span>
                           <span>{result.saltName}</span>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                          ₹{result.price}
+                          {/* ₹{result.price} */}
                         </div>
                       </div>
                     </div>
@@ -368,12 +368,12 @@ function App() {
                     {/* Footer */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-6">
-                        <div className="flex items-center space-x-2">
+                        {/* <div className="flex items-center space-x-2">
                           <Package className="w-4 h-4 text-slate-400" />
                           <span className="text-sm text-slate-600">
                             <span className="font-bold text-slate-800">{result.quantity}</span> units available
                           </span>
-                        </div>
+                        </div> */}
 
                       </div>
                       <div className="flex items-center space-x-3">
@@ -515,30 +515,6 @@ function App() {
                       {selectedWholesaler.wholesalerDetails.totalProducts.toLocaleString()}
                     </div>
                     <div className="text-sm text-slate-600 font-medium">Total Products</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Current Product Info */}
-              <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl p-6 border-2 border-blue-200">
-                <h3 className="text-lg font-bold text-slate-800 mb-4">Current Search Result</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <div className="text-sm text-slate-600 mb-1">Product</div>
-                    <div className="font-bold text-lg text-slate-800">{selectedWholesaler.itemName}</div>
-                    <div className="text-sm text-slate-600">{selectedWholesaler.brandName}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-slate-600 mb-1">Available Quantity</div>
-                    <div className="font-bold text-lg text-green-600">{selectedWholesaler.quantity} units</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-slate-600 mb-1">Price per Unit</div>
-                    <div className="font-bold text-lg text-blue-600">₹{selectedWholesaler.price}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-slate-600 mb-1">Last Updated</div>
-                    <div className="font-bold text-slate-800">{selectedWholesaler.lastUpdate}</div>
                   </div>
                 </div>
               </div>
